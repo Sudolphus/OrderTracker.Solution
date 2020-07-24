@@ -26,10 +26,11 @@ namespace OrderTracker.Controllers
       return RedirectToAction("Index");
     }
 
-    // [HttpGet("/vendors/{id}")]
-    // public ActionResult Show(int id)
-    // {
-
-    // }
+    [HttpGet("/vendors/{id}")]
+    public ActionResult Show(int id)
+    {
+      Vendor foundVendor = Vendor.FindVendor(id);
+      return View(foundVendor);
+    }
   }
 }

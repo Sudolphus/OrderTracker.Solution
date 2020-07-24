@@ -1,0 +1,39 @@
+@using OrderTracker.Models;
+@{
+  Layout = "_Layout";
+}
+
+<div class="page-header">
+  <h1>Vendor Details</h1>
+</div>
+
+<div class="row">
+  <div class="col-md-3">
+    @Html.Partial("_Sidebar")
+  </div>
+  <div class="col-md-9">
+    @if (@Model == null)
+    {
+      <p>Vendor Not Found</p>
+    }
+    else
+    {
+      <h2>@Model.Name</h2>
+      @if (@Model.GetOrders().Count == 0)
+      {
+        <p>No Orders Recorded For This Vendor</p>
+      }
+      else
+      {
+        <div class="order-list">
+          <ol>
+            @foreach(Order order in Model)
+            {
+              <li>Bread: @order.BreadOrder, Pastry: @order.PastryOrder</li>
+            }
+          </ol>
+        </div>
+      }
+    }
+  </div>
+</div>
