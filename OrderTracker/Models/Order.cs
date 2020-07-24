@@ -4,7 +4,7 @@ namespace OrderTracker.Models
   {
     public int BreadOrder { get; }
     public int PastryOrder { get; }
-
+    public int ID { get; }
     public Order(int bread, int pastry)
     {
       BreadOrder = bread;

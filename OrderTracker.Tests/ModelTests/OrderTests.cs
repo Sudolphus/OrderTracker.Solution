@@ -16,5 +16,13 @@ namespace OrderTracker.Tests
       Assert.AreEqual(expectedBread, newOrder.BreadOrder);
       Assert.AreEqual(expectedPastry, newOrder.PastryOrder);
     }
+
+    [TestMethod]
+    public void OrderConstructor_AssignIDsToOrder_Match()
+    {
+      Order newOrder = new Order(0,0);
+      int _expectedID = 1;
+      Assert.AreEqual(_expectedID, newOrder.ID);
+    }
   }
 }
