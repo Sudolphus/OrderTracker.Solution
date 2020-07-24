@@ -52,6 +52,9 @@
     }
     <button class="btn btn-success link-button" onclick="location.href='/vendors/@Model.ID/orders/new'">Add Order To This Vendor</a>
     <button class="btn btn-success link-button" onclick="location.href='/vendors/@Model.ID/edit'">Update This Vendor</a>
+    <form action='/vendors/@Model.ID/destroy' method='post'>
+      <button class="btn btn-warning link-button" type="submit">Delete This Vendor</a>
+    </form>
   </div>
 </div>
 

@@ -47,5 +47,12 @@ namespace OrderTracker.Controllers
       vendor.VendorUpdate(vendorName, vendorPhone, vendorAddress, vendorEmail);
       return RedirectToAction("Show", new { id = id });
     }
+
+    [HttpPost("/vendors/{id}/destroy")]
+    public ActionResult Destroy(int id)
+    {
+      Vendor.Delete(id);
+      return RedirectToAction("Index");
+    }
   }
 }
