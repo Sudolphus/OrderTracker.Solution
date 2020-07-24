@@ -29,5 +29,19 @@ namespace OrderTracker.Models
     {
       return _orderList;
     }
+
+    public static Order FindOrder(int id)
+    {
+      Order foundOrder = null;
+      for (int i = 0; i < _orderList.Count; i++)
+      {
+        if (_orderList[i].ID == id)
+        {
+          foundOrder = _orderList[i];
+          break;
+        }
+      }
+      return foundOrder;
+    }
   }
 }

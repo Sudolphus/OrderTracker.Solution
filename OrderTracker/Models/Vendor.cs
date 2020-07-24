@@ -47,6 +47,7 @@ namespace OrderTracker.Models
         if (_vendorList[i].ID == id)
         {
           foundVendor = _vendorList[i];
+          break;
         }
       }
       return foundVendor;

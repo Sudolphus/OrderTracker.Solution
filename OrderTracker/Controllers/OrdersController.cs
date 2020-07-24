@@ -27,7 +27,8 @@ namespace OrderTracker.Controllers
     // [HttpPost("/vendors/{vendorID}/orders/{orderID}")]
     // public ActionResult Show(int vendorID, int orderID)
     // {
-
+    //   Vendor vendor = Vendor.FindVendor(vendorID);
+    //   Order order = Order.FindOrder
     // }
   }
 }
