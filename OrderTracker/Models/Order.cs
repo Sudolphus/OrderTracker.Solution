@@ -8,6 +8,7 @@ namespace OrderTracker.Models
     public int PastryOrder { get; }
     public int ID { get; }
     private static int _nextID = 1;
+    private static List<Order> _orderList = new List<Order>();
 
     public Order(int bread, int pastry)
     {
@@ -15,17 +16,18 @@ namespace OrderTracker.Models
       PastryOrder = pastry;
       ID = _nextID;
       _nextID++;
+      _orderList.Add(this);
     }
 
     public static void ResetOrders()
     {
       _nextID = 1;
+      _orderList.Clear();
     }
 
     public static List<Order> GetAll()
     {
-      List<Order> dummyList = new List<Order>();
-      return dummyList;
+      return _orderList;
     }
   }
 }
