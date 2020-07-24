@@ -31,7 +31,7 @@ body {
   min-height: 100vh;
 }
 
-.links-list > ul, .vendors-list > ul {
+.links-list > ul, .vendors-list > ul, .order-list > ul {
   list-style-type: none;
 }
 
