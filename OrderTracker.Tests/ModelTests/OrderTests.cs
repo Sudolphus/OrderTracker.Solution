@@ -49,5 +49,13 @@ namespace OrderTracker.Tests
       Order foundOrder = Order.FindOrder(2);
       Assert.AreEqual(newOrder2, foundOrder);
     }
+
+    [TestMethod]
+    public void DeleteOrder_ShouldDeleteAnOrder_Removed()
+    {
+      Order newOrder = new Order(0, 0);
+      Order.DeleteOrder(newOrder);
+      CollectionAssert.DoesNotContain(Order.GetAll(), newOrder);
+    }
   }
 }
