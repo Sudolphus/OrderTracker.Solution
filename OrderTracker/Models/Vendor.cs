@@ -17,6 +17,17 @@ namespace OrderTracker.Models
       _vendorList.Add(this);
     }
 
+    public void AddOrder(Order newOrder)
+    {
+
+    }
+
+    public List<Order> GetOrders()
+    {
+      List<Order> dummyList = new List<Order>();
+      return dummyList;
+    }
+
     public static void ResetVendors()
     {
       _nextID = 1;

@@ -37,5 +37,15 @@ namespace OrderTracker.Tests
       List<Vendor> _expectedList = new List<Vendor> { newVendor1, newVendor2 };
       CollectionAssert.AreEqual(_expectedList, Vendor.GetAll());
     }
+
+    [TestMethod]
+    public void AddOrder_ShouldAddOrderToVendor()
+    {
+      Vendor newVendor = new Vendor("Suzie's");
+      Order newOrder = new Order(5, 3);
+      newVendor.AddOrder(newOrder);
+      List<Order> _expectedList = new List<Order> { newOrder };
+      CollectionAssert.AreEqual(_expectedList, newVendor.GetOrders());
+    }
   }
 }
