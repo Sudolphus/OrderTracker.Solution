@@ -1,17 +1,22 @@
-# _{Application Name}_
+# _Order Tracker_
 
-#### _{Brief description of application}, {Date of current version}_
+#### _An app to track orders, 7.24.29_
 
 #### By _**Micheal Hansen**_
 
 ## Description
 
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
+_An app designed to help Pierre from the Bakery keep track of all the Vendors he's supplying and the orders he is supplying them with._
 
 ## Specifications
 
 | Spec | Input | Output |
 | :--- | :---: | ---: |
+|Program tracks Vendors|GET|List of vendors|
+|Program can add new Vendors|Add new Vendor("Suzie's")|Vendors = {"Suzie"}|
+|Program can display all Orders by a given Vendor|"Suzie's"|Orders={Bread = 0, Pastries = 0}|
+|Program can add new Orders to a Vendor|"Suzies->Order 3 Bread, 5 Pastries"|Orders={Bread = 3, Pastries = 5}|
+|Program 
 
 
 ## Setup/Installation Requirements
@@ -34,7 +39,7 @@ Running the program:
 
 ## Known Bugs
 
-_{Are there issues that have not yet been resolved that you want to let users know you know?  Outline any issues that would impact use of your application.  Share any workarounds that are in place. }_
+_None currently known_
 
 ## Support and contact details
 
@@ -44,25 +49,3 @@ _Please reach out through my GitHub account._
 
 * _VSCode_
 * _C# and .NET_
-
-### License
-
-Copyright (c) 2020 **_Micheal Hansen_**
-
-*Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:*
-
-*The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.*
-
-*THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.*
