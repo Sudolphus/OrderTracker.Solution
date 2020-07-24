@@ -7,22 +7,25 @@ namespace OrderTracker.Models
     public string Name { get; }
     public int ID { get; }
     private static int _nextID = 1;
+    private static List<Vendor> _vendorList = new List<Vendor>();
+
     public Vendor(string name)
     {
       Name = name;
       ID = _nextID;
       _nextID++;
+      _vendorList.Add(this);
     }
 
     public static void ResetVendors()
     {
       _nextID = 1;
+      _vendorList.Clear();
     }
 
     public static List<Vendor> GetAll()
     {
-      List<Vendor> dummyList = new List<Vendor>();
-      return dummyList;
+      return _vendorList;
     }
   }
 }
