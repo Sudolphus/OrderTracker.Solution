@@ -51,6 +51,10 @@ body {
   width: 80%;
 }
 
+.card-img-top {
+  max-height: 80vh;
+}
+
 a {
   color: blue;
 }
