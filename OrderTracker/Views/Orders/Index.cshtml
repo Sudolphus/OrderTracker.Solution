@@ -12,13 +12,13 @@
     @Html.Partial("_Sidebar")
   </div>
   <div class="col-md-9">
-    @if (@Model["vendor"].Count() == 0)
+    @if (@Model["vendor"].Count == 0)
     {
       <p>No Vendors Added</p>
     }
     else
     {
-      @if (@Model["order"].Count() == 0)
+      @if (@Model["order"].Count == 0)
       {
         <p>No Orders Adds</p>
       }

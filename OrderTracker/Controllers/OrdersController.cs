@@ -16,5 +16,12 @@ namespace OrderTracker.Controllers
       listDictionary["order"] = orderList;
       return View(listDictionary);
     }
+
+    [HttpGet("/vendors/{vendorID}/orders/new")]
+    public ActionResult New(int vendorID)
+    {
+      Vendor vendor = Vendor.FindVendor(vendorID);
+      return View(vendor);
+    }
   }
 }
