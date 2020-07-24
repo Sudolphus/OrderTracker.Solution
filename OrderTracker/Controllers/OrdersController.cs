@@ -23,5 +23,11 @@ namespace OrderTracker.Controllers
       vendor.AddOrder(newOrder);
       return RedirectToAction("Index", "Vendors", new { area = ""});
     }
+
+    // [HttpPost("/vendors/{vendorID}/orders/{orderID}")]
+    // public ActionResult Show(int vendorID, int orderID)
+    // {
+
+    // }
   }
 }

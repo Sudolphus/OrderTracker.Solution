@@ -24,7 +24,12 @@
         <ul>
           @foreach(Vendor vendor in Model)
           {
-            <li><button class="btn btn-success link-button" onclick="location.href='/vendors/@vendor.ID'">@vendor.Name</button></li>
+            <div class="card bg-success">
+              <div class="card-body">
+                <a href='/vendors/@vendor.ID' class='stretched-link'>@vendor.Name</a>
+              </div>
+            </div>
+            @* <li><button class="btn btn-success link-button" onclick="location.href='/vendors/@vendor.ID'">@vendor.Name</button></li> *@
           }
         </ul>
       </div>

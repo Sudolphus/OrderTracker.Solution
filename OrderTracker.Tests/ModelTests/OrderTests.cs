@@ -40,5 +40,14 @@ namespace OrderTracker.Tests
       List<Order> _expectedList = new List<Order>{ newOrder, newOrder2 };
       CollectionAssert.AreEqual(_expectedList, Order.GetAll());
     }
+
+    [TestMethod]
+    public void FindOrder_GetOrderById_Match()
+    {
+      Order newOrder = new Order(0, 0);
+      Order newOrder2 = new Order(3, 4);
+      Order foundOrder = Order.FindOrder(2);
+      Assert.AreEqual(newOrder2, foundOrder);
+    }
   }
 }
