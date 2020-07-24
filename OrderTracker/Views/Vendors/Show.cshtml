@@ -29,7 +29,11 @@
           <ol>
             @foreach(Order order in Model.GetOrders())
             {
-              <li>Bread: @order.BreadOrder, Pastry: @order.PastryOrder</li>
+              <li><div class="card">
+                <div class="card-body">
+                  Bread: @order.BreadOrder, Pastry: @order.PastryOrder
+                </div>
+              </div></li>
             }
           </ol>
         </div>

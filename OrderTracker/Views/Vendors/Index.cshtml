@@ -16,6 +16,7 @@
     @if (@Model.Count == 0)
     {
       <p>You haven't added any vendors.</p>
+      <a href="/vendors/new">To add vendors start here</a>
     }
     else
     {
@@ -23,11 +24,14 @@
         <ul>
           @foreach(Vendor vendor in Model)
           {
-            <li><a href="/vendors/@vendor.ID">@vendor.Name</a></li>
+            <div class="card">
+              <div class="card-body">
+                <li><a href="/vendors/@vendor.ID">@vendor.Name</a></li>
+              </div>
+            </div>
           }
         </ul>
       </div>
     }
-    <a href="/vendors/new">Add New Vendor</a>
   </div>
 </div>

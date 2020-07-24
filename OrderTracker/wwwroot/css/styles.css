@@ -31,8 +31,24 @@ body {
   min-height: 100vh;
 }
 
-.links-list > ul {
+.links-list > ul, .vendors-list > ul {
   list-style-type: none;
+}
+
+.card {
+  background-color: inherit;
+  border: 1px solid black;
+  margin-bottom: 5px;
+}
+
+.vendorNameLabel{
+  font-size: 20px;
+  font-weight: bold;
+  color: green;
+}
+
+.link-button {
+  width: 80%;
 }
 
 a {

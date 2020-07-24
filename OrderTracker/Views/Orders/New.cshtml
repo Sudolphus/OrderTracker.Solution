@@ -11,18 +11,23 @@
     @Html.Partial("_Sidebar")
   </div>
   <div class="col-md-9">
-    <h3>@Model.Name</h3>
     <div class="col-md-9">
-      <form action="/vendors/@Model.ID/orders" method="post">
-        <div class="form-group">
-          <label for="breadOrder">Amount of Bread:</label>
-          <input id="breadOrder" name="breadOrder" type="text" class="form-control">
+      <div class="card">
+        <div class="card-body">
+          <h3>@Model.Name</h3>
+          <form action="/vendors/@Model.ID/orders" method="post">
+            <div class="form-group">
+              <label for="breadOrder">Amount of Bread:</label>
+              <input id="breadOrder" name="breadOrder" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="pastryOrder">Amount of Pastry:</label>
+              <input id="pastryOrder" name="pastryOrder" type="text" class="form-control">
+            </div>
+            <button class="btn btn-success" type="submit">Add Order</button>
+          </form>
         </div>
-        <div class="form-group">
-          <label for="pastryOrder">Amount of Pastry:</label>
-          <input id="pastryOrder" name="pastryOrder" type="text" class="form-control">
-        </div>
-        <button class="btn btn-success" type="submit">Add Order</button>
-      </form>
+      </div>
+    </div>
   </div>
 </div>

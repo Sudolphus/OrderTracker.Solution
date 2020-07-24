@@ -7,12 +7,16 @@
     @Html.Partial("_Sidebar")
   </div>
   <div class="col-md-9">
-    <form action="/vendors" method="post">
-      <div class="form-group">
-        <label for="vendorName">Vendor Name</label>
-        <input id="vendorName" name="vendorName" type="text" class="form-control">
+    <div class="card">
+      <div class="card-body">
+        <form action="/vendors" method="post">
+          <div class="form-group">
+            <label for="vendorName" class="vendorNameLabel">Vendor Name</label>
+            <input id="vendorName" name="vendorName" type="text" class="form-control" required>
+          </div>
+          <button class="btn btn-success" type="submit">Add New Vendor</button>
+        </form>
       </div>
-      <button class="btn btn-success" type="submit">Add New Vendor</button>
-    </form>
+    </div>
   </div>
 </div>
