@@ -77,7 +77,8 @@ namespace OrderTracker.Models
 
     public static void Delete(int id)
     {
-      
+      Vendor foundVendor = FindVendor(id);
+      _vendorList.Remove(foundVendor);
     }
   }
 }
