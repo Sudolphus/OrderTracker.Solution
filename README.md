@@ -16,7 +16,6 @@ _An app designed to help Pierre from the Bakery keep track of all the Vendors he
 |Program can add new Vendors|Add new Vendor("Suzie's")|Vendors = {"Suzie"}|
 |Program can display all Orders by a given Vendor|"Suzie's"|Orders={Bread = 0, Pastries = 0}|
 |Program can add new Orders to a Vendor|"Suzies->Order 3 Bread, 5 Pastries"|Orders={Bread = 3, Pastries = 5}|
-|Program 
 
 
 ## Setup/Installation Requirements
