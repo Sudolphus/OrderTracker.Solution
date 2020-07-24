@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace ProjectName
+namespace OrderTracker
 {
   public class Startup
   {
@@ -25,6 +25,8 @@ namespace ProjectName
 
     public void Configure(IApplicationBuilder app)
     {
+      app.UseDeveloperExceptionPage();
+
       app.UseMvc(routes =>
       {
         routes.MapRoute(
@@ -32,12 +34,12 @@ namespace ProjectName
           template: "{controller=Home}/{action=label}/{id?}");
       });
 
+      app.UseStaticFiles();
+      
       app.Run(async (context) =>
       {
         await context.Response.WriteAsync("Hello World!");
       });
-
-      app.UseDeveloperExceptionPage();
     }
   }
 }

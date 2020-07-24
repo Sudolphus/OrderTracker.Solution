@@ -1,12 +1,12 @@
 using Microsoft.AspNetCore.Mvc;
-using OrderTracker.Models;
+// using OrderTracker.Models;
 
 namespace OrderTracker.Controllers
 {
   public class HomeController : Controller
   {
-    [Route("/")]
-    public ActionResult Homepage() {
+    [HttpGet("/")]
+    public ActionResult Index() {
       return View();
     }
   }

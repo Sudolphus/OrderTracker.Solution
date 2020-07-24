@@ -1,7 +1,7 @@
 using System.IO;
 using Microsoft.AspNetCore.Hosting;
 
-namespace ProjectName
+namespace OrderTracker
 {
   public class Program
   {
@@ -10,6 +10,7 @@ namespace ProjectName
       var host = new WebHostBuilder()
         .UseKestrel()
         .UseContentRoot(Directory.GetCurrentDirectory())
+        .UseWebRoot("wwwroot")
         .UseIISIntegration()
         .UseStartup<Startup>()
         .Build();
