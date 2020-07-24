@@ -19,6 +19,15 @@
     else
     {
       <h2>@Model.Name</h2>
+      @if (@Model.Phone != null){
+        <h4>Phone: @Model.Phone</h4>
+      }
+      @if (@Model.Address != null){
+        <h4>Address: @Model.Address</h4>
+      }
+      @if (@Model.Email != null){
+        <h4>Email: @Model.Email</h4>
+      }
       @if (@Model.GetOrders().Count == 0)
       {
         <p>No Orders Recorded For This Vendor</p>
