@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace OrderTracker.Models
 {
   public class Vendor
@@ -15,6 +17,12 @@ namespace OrderTracker.Models
     public static void ResetVendors()
     {
       _nextID = 1;
+    }
+
+    public static List<Vendor> GetAll()
+    {
+      List<Vendor> dummyList = new List<Vendor>();
+      return dummyList;
     }
   }
 }

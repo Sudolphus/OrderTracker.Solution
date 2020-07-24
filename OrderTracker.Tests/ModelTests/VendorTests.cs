@@ -1,6 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OrderTracker.Models;
 using System;
+using System.Collections.Generic;
 
 namespace OrderTracker.Tests
 {
@@ -26,6 +27,15 @@ namespace OrderTracker.Tests
       Vendor newVendor = new Vendor("Suzie's");
       int _expectedID = 1;
       Assert.AreEqual(_expectedID, newVendor.ID);
+    }
+
+    [TestMethod]
+    public void VendorConstructor_ShouldAddVendorToList_Added()
+    {
+      Vendor newVendor1 = new Vendor("Suzie's");
+      Vendor newVendor2 = new Vendor("Central Perk");
+      List<Vendor> _expectedList = new List<Vendor> { newVendor1, newVendor2 };
+      CollectionAssert.AreEqual(_expectedList, Vendor.GetAll());
     }
   }
 }
