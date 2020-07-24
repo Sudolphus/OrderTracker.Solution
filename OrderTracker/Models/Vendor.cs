@@ -37,5 +37,11 @@ namespace OrderTracker.Models
     {
       return _vendorList;
     }
+
+    public static Vendor FindVendor(int id)
+    {
+      Vendor dummyVendor = new Vendor("dummy");
+      return dummyVendor;
+    }
   }
 }

@@ -39,13 +39,21 @@ namespace OrderTracker.Tests
     }
 
     [TestMethod]
-    public void AddOrder_ShouldAddOrderToVendor()
+    public void AddOrder_ShouldAddOrderToVendor_ListMatch()
     {
       Vendor newVendor = new Vendor("Suzie's");
       Order newOrder = new Order(5, 3);
       newVendor.AddOrder(newOrder);
       List<Order> _expectedList = new List<Order> { newOrder };
       CollectionAssert.AreEqual(_expectedList, newVendor.GetOrders());
+    }
+
+    [TestMethod]
+    public void FindVendor_ShouldFindVendorFromID_Match()
+    {
+      Vendor newVendor = new Vendor("Suzie's");
+      Vendor foundVendor = Vendor.FindVendor(1);
+      Assert.AreEqual(newVendor, foundVendor);
     }
   }
 }

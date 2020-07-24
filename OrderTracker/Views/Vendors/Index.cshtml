@@ -23,7 +23,7 @@
         <ul>
           @foreach(Vendor vendor in Model)
           {
-            <li>@vendor.Name</li>
+            <li><a href="/vendors/@Model.ID">@vendor.Name</a></li>
           }
         </ul>
       </div>
