@@ -1,3 +1,44 @@
+body {
+  background-image: url(./../img/background.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-sizing: border-box;
+}
+
+.row, .page-header {
+  background: rgba(255, 255, 255, .5);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, .5);
+  padding: 50px;
+  margin-top: 50px;
+  margin-right: 10px;
+  margin-left: 10px;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.row {
+  min-height: 100vh;
+}
+
 .page-header {
   text-align: center;
+  color: white;
+}
+
+.links-list {
+  border-right: 3px solid black;
+  min-height: 100vh;
+}
+
+.links-list > ul {
+  list-style-type: none;
+}
+
+a {
+  color: blue;
+}
+
+a:hover {
+  color: darkblue;
 }
