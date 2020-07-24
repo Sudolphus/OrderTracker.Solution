@@ -43,5 +43,10 @@ namespace OrderTracker.Models
       }
       return foundOrder;
     }
+
+    public static void DeleteOrder(Order deleteThis)
+    {
+      _orderList.Remove(deleteThis);
+    }
   }
 }
