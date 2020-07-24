@@ -29,9 +29,9 @@
           <ul>
             @foreach(Order order in Model.GetOrders())
             {
-              <li><div class="card">
+              <li><div class="card bg-success">
                 <div class="card-body">
-                  <p>Bread: @order.BreadOrder, Pastry: @order.PastryOrder</p>
+                  <a href="/vendors/@Model.ID/orders/@order.ID" class="stretched-link">Bread: @order.BreadOrder, Pastry: @order.PastryOrder</a>
                 </div>
                 <div class="card-footer">
                 </div>

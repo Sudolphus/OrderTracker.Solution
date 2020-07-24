@@ -24,11 +24,13 @@ namespace OrderTracker.Controllers
       return RedirectToAction("Index", "Vendors", new { area = ""});
     }
 
-    // [HttpPost("/vendors/{vendorID}/orders/{orderID}")]
-    // public ActionResult Show(int vendorID, int orderID)
-    // {
-    //   Vendor vendor = Vendor.FindVendor(vendorID);
-    //   Order order = Order.FindOrder
-    // }
+    [HttpGet("/vendors/{vendorID}/orders/{orderID}")]
+    public ActionResult Show(int vendorID, int orderID)
+    {
+      Vendor vendor = Vendor.FindVendor(vendorID);
+      Order order = Order.FindOrder(orderID);
+      object[] vendorOrderArray = new object[]{vendor, order};
+      return View(vendorOrderArray);
+    }
   }
 }
