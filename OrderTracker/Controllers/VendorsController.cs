@@ -32,5 +32,20 @@ namespace OrderTracker.Controllers
       Vendor foundVendor = Vendor.FindVendor(id);
       return View(foundVendor);
     }
+
+    [HttpGet("/vendors/{id}/edit")]
+    public ActionResult Edit(int id)
+    {
+      Vendor vendor = Vendor.FindVendor(id);
+      return View(vendor);
+    }
+
+    [HttpPost("/vendors/{id}/edit")]
+    public ActionResult Update(int id, string vendorName, string vendorPhone, string vendorAddress, string vendorEmail)
+    {
+      Vendor vendor = Vendor.FindVendor(id);
+      vendor.VendorUpdate(vendorName, vendorPhone, vendorAddress, vendorEmail);
+      return RedirectToAction("Show", new { id = id });
+    }
   }
 }
