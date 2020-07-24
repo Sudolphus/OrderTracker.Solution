@@ -6,9 +6,9 @@ namespace OrderTracker.Models
   {
     public string Name { get; }
     public int ID { get; }
+    private List<Order> _orderList = new List<Order>();
     private static int _nextID = 1;
     private static List<Vendor> _vendorList = new List<Vendor>();
-
     public Vendor(string name)
     {
       Name = name;
@@ -19,13 +19,12 @@ namespace OrderTracker.Models
 
     public void AddOrder(Order newOrder)
     {
-
+      _orderList.Add(newOrder);
     }
 
     public List<Order> GetOrders()
     {
-      List<Order> dummyList = new List<Order>();
-      return dummyList;
+      return _orderList;
     }
 
     public static void ResetVendors()
