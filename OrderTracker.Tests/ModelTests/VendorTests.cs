@@ -74,5 +74,13 @@ namespace OrderTracker.Tests
       foundVendor.VendorUpdate("Suzies", "503-555-1234", "123 Fake Street", "suzies@bakery.com");
       Assert.AreEqual("503-555-1234", newVendor.Phone);
     }
+
+    [TestMethod]
+    public void VendorDelete_CanRemoveAVendor_Delete()
+    {
+      Vendor newVendor = new Vendor("Suzies", "503-555-9999", "123 Fake Street", "suzies@bakery.com");
+      Vendor.Delete(1);
+      CollectionAssert.DoesNotContain(Vendor.GetAll(), newVendor);
+    }
   }
 }

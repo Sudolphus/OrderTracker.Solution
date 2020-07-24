@@ -74,5 +74,10 @@ namespace OrderTracker.Models
       }
       return foundVendor;
     }
+
+    public static void Delete(int id)
+    {
+      
+    }
   }
 }
