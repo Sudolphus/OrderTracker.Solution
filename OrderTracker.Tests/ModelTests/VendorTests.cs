@@ -65,5 +65,14 @@ namespace OrderTracker.Tests
       Assert.AreEqual("123 Fake Street", newVendor.Address);
       Assert.AreEqual("suzies@bakery.com", newVendor.Email);
     }
+
+    [TestMethod]
+    public void VendorUpdate_CanUpdateAVendorInfo_Update()
+    {
+      Vendor newVendor = new Vendor("Suzies", "503-555-9999", "123 Fake Street", "suzies@bakery.com");
+      Vendor foundVendor = Vendor.FindVendor(1);
+      foundVendor.VendorUpdate("Suzies", "503-555-1234", "123 Fake Street", "suzies@bakery.com");
+      Assert.AreEqual("503-555-1234", newVendor.Phone);
+    }
   }
 }
