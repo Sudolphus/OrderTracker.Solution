@@ -11,7 +11,12 @@ namespace OrderTracker.Controllers
     {
       List<Vendor> vendorList = Vendor.GetAll();
       return View(vendorList);
-      // return View();
+    }
+
+    [HttpGet("/vendors/new")]
+    public ActionResult New()
+    {
+      return View();
     }
   }
 }
