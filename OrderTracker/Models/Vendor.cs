@@ -42,6 +42,14 @@ namespace OrderTracker.Models
       return _orderList;
     }
 
+    public void VendorUpdate(string name, string phoneNumber, string address, string email)
+    {
+      Name = name;
+      Phone = phoneNumber;
+      Address = address;
+      Email = email;
+    }
+
     public static void ResetVendors()
     {
       _nextID = 1;
