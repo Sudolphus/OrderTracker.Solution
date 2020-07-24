@@ -24,6 +24,9 @@ namespace OrderTracker.Models
     public Vendor(string name, string phoneNumber, string address, string email)
     {
       Name = name;
+      Phone = phoneNumber;
+      Address = address;
+      Email = email;
       ID = _nextID;
       _nextID++;
       _vendorList.Add(this);
