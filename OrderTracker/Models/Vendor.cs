@@ -4,13 +4,24 @@ namespace OrderTracker.Models
 {
   public class Vendor
   {
-    public string Name { get; }
+    public string Name { get; set; }
+    public string Phone { get; set; }
+    public string Address { get; set; }
+    public string Email { get; set; }
     public int ID { get; }
     private List<Order> _orderList = new List<Order>();
     private static int _nextID = 1;
     private static List<Vendor> _vendorList = new List<Vendor>();
 
     public Vendor(string name)
+    {
+      Name = name;
+      ID = _nextID;
+      _nextID++;
+      _vendorList.Add(this);
+    }
+
+    public Vendor(string name, string phoneNumber, string address, string email)
     {
       Name = name;
       ID = _nextID;

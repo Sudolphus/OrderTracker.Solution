@@ -55,5 +55,15 @@ namespace OrderTracker.Tests
       Vendor foundVendor = Vendor.FindVendor(1);
       Assert.AreEqual(newVendor, foundVendor);
     }
+
+    [TestMethod]
+    public void VendorConstructorOverload_StoreMoreData_Match()
+    {
+      Vendor newVendor = new Vendor("Suzies", "503-555-9999", "123 Fake Street", "suzies@bakery.com");
+      Assert.AreEqual("Suzies", newVendor.Name);
+      Assert.AreEqual("503-555-9999", newVendor.Phone);
+      Assert.AreEqual("123 Fake Street", newVendor.Address);
+      Assert.AreEqual("suzies@bakery.com", newVendor.Email);
+    }
   }
 }
