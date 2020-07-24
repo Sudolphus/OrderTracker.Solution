@@ -1,6 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OrderTracker.Models;
 using System;
+using System.Collections.Generic;
 
 namespace OrderTracker.Tests
 {
@@ -29,6 +30,15 @@ namespace OrderTracker.Tests
       Order newOrder = new Order(0,0);
       int _expectedID = 1;
       Assert.AreEqual(_expectedID, newOrder.ID);
+    }
+
+    [TestMethod]
+    public void GetAll_GetAListOfAllOrders_Match()
+    {
+      Order newOrder = new Order(0, 0);
+      Order newOrder2 = new Order(5, 3);
+      List<Order> _expectedList = new List<Order>{ newOrder, newOrder2 };
+      CollectionAssert.AreEqual(_expectedList, Order.GetAll());
     }
   }
 }
