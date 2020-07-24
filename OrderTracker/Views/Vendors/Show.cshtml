@@ -27,7 +27,7 @@
       {
         <div class="order-list">
           <ol>
-            @foreach(Order order in Model)
+            @foreach(Order order in Model.GetOrders())
             {
               <li>Bread: @order.BreadOrder, Pastry: @order.PastryOrder</li>
             }
