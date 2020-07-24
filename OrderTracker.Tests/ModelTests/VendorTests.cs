@@ -9,7 +9,7 @@ namespace OrderTracker.Tests
     [TestMethod]
     public void VendorConstuctor_ShouldCreateAVendorObject_TypeMatch()
     {
-      Vendor newVendor = new Vendor("Suzies");
+      Vendor newVendor = new Vendor("Suzie's");
       Assert.AreEqual(typeof(Vendor), newVendor.GetType());
       Assert.AreEqual("Suzie's", newVendor.Name);
     }
