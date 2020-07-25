@@ -38,7 +38,7 @@ Running the program:
 
 ## Known Bugs
 
-_None currently known_
+_Currently breaks if you don't enter an integer value for the bread on the add order form_
 
 ## Support and contact details
 

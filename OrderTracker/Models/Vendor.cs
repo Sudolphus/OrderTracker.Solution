@@ -78,7 +78,12 @@ namespace OrderTracker.Models
     public static void Delete(int id)
     {
       Vendor foundVendor = FindVendor(id);
+      List<Order> orderList = foundVendor.GetOrders();
       _vendorList.Remove(foundVendor);
+      foreach(Order deleteOrder in orderList)
+      {
+        Order.DeleteOrder(deleteOrder);
+      }
     }
   }
 }
